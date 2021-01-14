@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Watermarker</string>
+    <string name="ADD_PHOTO_CAMERA">Add Photo With Camera</string>
+    <string name="ADD_PHOTO_GALLERY">Add Photo From Gallery</string>
+    <string name="WATERMARK_FROM_GALLERY">Add Watermark From Gallery</string>
+    <string name="WATERMARK_TEXT">Add Text Watermark</string>
+    <string name="WATERMARK_INAPP">Add Watermark From The App</string>
+    <string name="SAVE_CHANGES">Save All Changes</string>
+    <string name="SAVE_TO_GALLERY">Save Photo In Gallery</string>
+    <string name="SHARE_WITH_FRIEND">Share It With Friends</string>
 </resources>
