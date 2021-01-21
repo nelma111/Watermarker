@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
@@ -54,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
         {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            mImageView.setImageBitmap(imageBitmap);
+            Intent passBitmap = new Intent(this, EditPicture.class);
+            passBitmap.putExtra("BitmapImage", imageBitmap);
+            startActivity(passBitmap);
         }
     }
 }
