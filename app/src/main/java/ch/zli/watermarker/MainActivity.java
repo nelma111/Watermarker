@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
+            mImageView.setImageBitmap(imageBitmap);
             Intent passBitmap = new Intent(MainActivity.this, ChooseWatermark.class);
             passBitmap.putExtra("MainBitmap", imageBitmap);
 
