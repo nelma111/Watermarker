@@ -1,4 +1,6 @@
-<img src="https://github.com/nelma111/Watermarker/blob/gh-pages/logo_large.png" height="100">
+<div style="text-align:center">
+  <img src="https://github.com/nelma111/Watermarker/blob/gh-pages/logo_large.png" height="200">
+</div>
 
 # Watermarker-App
 
