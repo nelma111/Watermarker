@@ -11,12 +11,13 @@ public class EditPicture extends AppCompatActivity {
 
     private ImageView mImageView;
 
+    Intent intent = getIntent();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_picture);
         mImageView = findViewById(R.id.MainImage);
-        Intent intent = getIntent();
         Bitmap imageBitmap = (Bitmap) intent.getParcelableExtra("BitmapImage");
         mImageView.setImageBitmap(imageBitmap);
     }

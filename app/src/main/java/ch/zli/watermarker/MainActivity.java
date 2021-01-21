@@ -1,19 +1,14 @@
 package ch.zli.watermarker;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(getPhotoIntent, RESULT_LOAD_IMG);
         }
     }
+    public void showNotification(){
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(R.mipmap.ic_launcher_round)
+                        .setContentTitle("My notification")
+                        .setContentText("Hello World!");
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
@@ -56,8 +59,9 @@ public class MainActivity extends AppCompatActivity {
         {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            Intent passBitmap = new Intent(this, EditPicture.class);
-            passBitmap.putExtra("BitmapImage", imageBitmap);
+            Intent passBitmap = new Intent(MainActivity.this, ChooseWatermark.class);
+            passBitmap.putExtra("MainBitmap", imageBitmap);
+
             startActivity(passBitmap);
         }
     }

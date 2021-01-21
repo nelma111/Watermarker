@@ -13,6 +13,7 @@
         android:layout_width="205dp"
         android:layout_height="87dp"
         android:text="@string/WATERMARK_FROM_GALLERY"
+        android:onClick="getWatermarkFormGallery"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
