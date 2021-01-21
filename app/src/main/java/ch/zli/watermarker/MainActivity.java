@@ -42,14 +42,6 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(getPhotoIntent, RESULT_LOAD_IMG);
         }
     }
-    public void showNotification(){
-        NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.mipmap.ic_launcher_round)
-                        .setContentTitle("My notification")
-                        .setContentText("Hello World!");
-    }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)

@@ -4,7 +4,7 @@
 
     <uses-feature
         android:name="android.hardware.camera2"
-        android:required="true"/>
+        android:required="true" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -16,10 +16,11 @@
         android:roundIcon="@mipmap/watermark_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Watermarker">
-        <activity android:name=".SaveAndShare"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".SaveAndShare" />
         <activity android:name=".EditPicture" />
         <activity android:name=".ChooseWatermark" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
